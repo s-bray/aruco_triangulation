@@ -139,6 +139,8 @@ class ExtrinsicMeasurer(Node):
               f"{t_mean[0]:.4f} {t_mean[1]:.4f} {t_mean[2]:.4f} "
               f"{q_mean[0]:.4f} {q_mean[1]:.4f} {q_mean[2]:.4f} {q_mean[3]:.4f} "
               f"world cam2_optical_frame")
+        baseline = float(np.linalg.norm(t_mean))
+        print(f'  Camera baseline (distance): {baseline:.4f} m')
         print('='*60)
 
 
